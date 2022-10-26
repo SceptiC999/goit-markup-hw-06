@@ -339,6 +339,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .modal {
     position: absolute;
+    padding: 40px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -350,18 +351,17 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .modal-form {
-    margin: auto;
     width: 448px;
 
 }
 
 .modal-title {
+    display: inline-block;
     width: 100%;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     color: var(--secondary-text-color);
-    margin-top: 40px;
     margin-bottom: 12px;
     padding: 0;
 }
@@ -382,10 +382,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .form-input {
     width: 100%;
-    padding-bottom: 12px;
-    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     padding-left: 42px;
-    padding-right: 12px;
+    padding-right: 10px;
     margin: 0;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -397,12 +397,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 }
 
+
 .form-label {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--thirdy-text-color);
+    margin-bottom: 4px;
 }
 
 .modal-field-icon {
@@ -448,21 +450,30 @@ textarea {
     height: 120px;
 }
 
+textarea:focus, textarea:hover {
+    border-color: var(--accent-text-color);
+}
+
 
 .modal-field-deal {
     position: relative;
     display: flex;
+    justify-content: center;
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
 .form-label-deal {
     display: inline;
-    text font-weight: 400;
+    font-weight: 400;
     font-size: 14px;
     line-height: 1.88;
     color: var(--thirdy-text-color);
     margin-left: 23px;
+}
+
+.link-deal {
+    color: var(--accent-text-color);
 }
 
 
@@ -483,7 +494,7 @@ textarea {
     cursor: pointer;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 40px;
+
 }
 
 
@@ -494,7 +505,6 @@ textarea {
 
 .modal-checkpoint {
     position: absolute;
-    display: inline-block;
 
     transform: translateY(-50%);
     border: 2px solid var(--primary-text-color);
@@ -503,10 +513,14 @@ textarea {
     height: 15px;
     top: 50%;
     left: 0px;
+    margin-left: 20px;
 
 }
 
 .modal-field-checkbox:checked+.modal-checkpoint {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url(/img/galochka.svg);
     background-color: var(--accent-text-color);
     border-color: var(--accent-text-color);
@@ -514,8 +528,7 @@ textarea {
     background-size: contain;
     width: 15px;
     height: 15px;
-    top: 50%;
-    left: 0px;
+
 
 }
 
@@ -528,6 +541,7 @@ textarea {
     top: 8px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
     padding: 0;
     cursor: pointer;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -977,7 +991,7 @@ textarea {
 }
 
 .footer-form {
-    margin-left: 93px;
+    margin-left: auto;
 }
 
 .footer-form-email {
@@ -985,14 +999,16 @@ textarea {
 }
 
 
-.footer-form-email input {
+.footer-form-input {
     width: 358px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: var(--accent-bg-color);
     border-radius: 4px;
     padding: 16px 15px;
+    color: var(--white-color);
 }
+
 
 .footer-form-button {
     display: flex;
